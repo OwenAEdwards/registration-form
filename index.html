@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <p>Please fill out this registration form with the required information</p>
+  <form method="GET" action="./destination.html">
+    <fieldset>
+      <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required></label>
+      <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required></label>
+      <label for="email">Enter Your Email Address: <input id="email" name="email" type="email" required></label>
+      <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*-_=+]).{8,20}$" required></label>
+      <ul>Password must meet the following requirements:
+        <li>Be between 8 and 20 characters length (inclusive)</li>
+        <li>Include at least 1 uppercase character</li>
+        <li>Include at least 1 lowercase character</li>
+        <li>Include at least 1 number</li>
+        <li>Include at least 1 of the following symbols: ! @ # $ % ^ & * - _ = +</li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Account type (required)</legend>
+      <label for="personal-account"><input id="personal-account" name="account-type" type="radio" class="inline" checked> Personal Account</label>
+      <label for="business-account"><input id="business-account" name="account-type" type="radio" class="inline"> Business Account</label>
+    </fieldset>
+    <fieldset>
+      <label for="profile-picture">Upload a picture profile picture: <input id="profile-picture" name="file" type="file"></label>
+      <label for="age">Input your age (years): <input id="age" name="age" type="number" min="13" max="125"></label>
+      <label for="referrer">How did you hear about us?
+        <select id="referrer" name="referrer">
+          <option value="">(select one)</option>
+          <option value="1">YouTube</option>
+          <option value="2">Twitter</option>
+          <option value="3">Facebook</option>
+          <option value="4">Instagram</option>
+          <option value="5">Other</option>
+        </select>
+      </label>
+      <label for="bio">Provide a bio: <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Enter bio here..."></textarea></label>
+    </fieldset>
+    <!-- add a link for the terms and conditions (scroll to the side)? -->
+    <label for="terms-and-conditions"> <input id="terms-and-conditions" class="inline" name="terms-and-conditions" type="checkbox" required> I accept the <a href="./terms-and-conditions.html" target="_blank">terms and conditions</a></label>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
